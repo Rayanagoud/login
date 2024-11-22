@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'login.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.PostgreSQL',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'tms_ey7i',
         'USER': 'tms_ey7i_user',
         'PASSWORD': 'i51HoIFG3p4ecuNdKzl2ttRmn30mOt7d',
