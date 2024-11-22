@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <style>
+        body {
+            padding-top:100px;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 600px;
+            height:350px;
+            margin: 0 auto;
+            padding: 100px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px; /* Increased font size for the heading */
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 16px; /* Increased font size for labels */
+        }
+
+        select, input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 16px; /* Increased font size for input elements */
+        }
+
+        select {
+            height: 40px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hi {{fname}},</h1>
+        <h1>Please Update the Profile</h1><br><br>
+        <form method="post" action="{% url 'quiz' %}">
+            {% csrf_token %}
+            <label for="job_role">Job Role:</label>
+            <select name="job_role" id="job_role">
+                <option value="Data Annotation Specialist">Data Annotation Specialist</option>
+                <option value="Software Intern">Software Intern</option>
+                <option value="Associate Software Engineer">Associate Software Engineer</option>
+                <option value="software Engineer">Software Engineer I</option>
+                <option value="Senior Software Engineer">Senior Software Engineer</option>
+                <!-- Add more job roles as needed -->
+            </select>
+
+            <br><br>
+
+            <label for="years_of_experience">Years of Experience:</label>
+            <input type="number" name="years_of_experience" id="years_of_experience" min="0" step="1">
+
+            <br><br>
+
+            <input type="submit" value="Update Profile">
+        </form>
+    </div>
+</body>
+</html>
+

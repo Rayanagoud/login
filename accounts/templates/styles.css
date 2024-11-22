@@ -1,0 +1,31 @@
+/* Style the body to give a background color and center the content. */
+body {
+    background-color: #f2f2f2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the h1 heading. */
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+/* Style the start button. */
+.start-button {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add hover effect for the button. */
+.start-button:hover {
+    background-color: #2980b9;
+}
+
+/* You can add additional styles as needed for your quiz application. */
