@@ -91,12 +91,12 @@ WSGI_APPLICATION = 'login.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tms',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',  # Or your PostgreSQL server's hostname
-        'PORT': '3306',           # Leave empty to use the default PostgreSQL port (5432)
+        'ENGINE': 'django.db.backends.PostgreSQL',
+        'NAME': 'tms_ey7i',
+        'USER': 'tms_ey7i_user',
+        'PASSWORD': 'i51HoIFG3p4ecuNdKzl2ttRmn30mOt7d',
+        'HOST': 'postgresql://tms_ey7i_user:i51HoIFG3p4ecuNdKzl2ttRmn30mOt7d@dpg-ct056qq3esus7386g4sg-a.oregon-postgres.render.com/tms_ey7i',  # Or your PostgreSQL server's hostname
+        'PORT': '5432',           # Leave empty to use the default PostgreSQL port (5432)
     }
 }
 
