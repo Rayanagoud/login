@@ -26,9 +26,10 @@ SECRET_KEY = 'django-insecure-2o7$c#p-he)4s_f_qg8rghg-_gb%b9@xeyh_6c(j^c6av3*fkq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =1
 
-ALLOWED_HOSTS = ['https://login.koyeb.app','systematic-tommi-knoweldge-e1f2f2e9.koyeb.app',
-    '127.0.0.1',  # For local testing
-    'localhost',]
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,[::1]").split(",")
+# ALLOWED_HOSTS = ['https://login.koyeb.app','systematic-tommi-knoweldge-e1f2f2e9.koyeb.app',
+#     '127.0.0.1',  # For local testing
+#     'localhost',]
 # RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 # if RENDER_EXTERNAL_HOSTNAME:
 #     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
